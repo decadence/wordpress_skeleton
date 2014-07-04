@@ -5,3 +5,4 @@ wp-content/*
 wp-content/themes/index.php
 !.gitignore
 !favicon.ico
+
