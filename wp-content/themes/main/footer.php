@@ -1,3 +1,10 @@
+<?
+if(!defined("ABSPATH"))
+{
+	exit;
+}
+?>
+
 </body>
 
 

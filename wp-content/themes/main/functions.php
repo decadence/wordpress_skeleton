@@ -1,1 +1,11 @@
 <?
+if(!defined("ABSPATH"))
+{
+	exit;
+}
+
+
+
+
+
+?>

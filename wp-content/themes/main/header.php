@@ -1,3 +1,9 @@
+<?
+if(!defined("ABSPATH"))
+{
+	exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 
