@@ -5,6 +5,9 @@ if(!defined("ABSPATH"))
 }
 
 get_header();
+?>
+	Контент
+<?
 get_footer();
 
 
