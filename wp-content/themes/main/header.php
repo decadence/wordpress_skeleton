@@ -3,6 +3,8 @@ if(!defined("ABSPATH"))
 {
 	exit;
 }
+
+// русский коммент
 ?>
 <!DOCTYPE html>
 <html>
