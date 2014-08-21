@@ -1,4 +1,0 @@
-[submodule "wp-content/themes/main/css/reset"]
-	path = wp-content/themes/main/css/reset
-	url = https://v_decadence@bitbucket.org/v_decadence/cssreset.git
-	branch = develop

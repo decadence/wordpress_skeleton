@@ -7,6 +7,7 @@ if(!defined("ABSPATH"))
 ?>
 
 <footer>
+Футер
 </footer>
 
 </body>
