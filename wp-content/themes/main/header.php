@@ -17,7 +17,7 @@ if(!defined("ABSPATH"))
 
 <title></title>
 
-<link href="./css/reset/reset.css" rel="stylesheet" />
+<link href="./css/reset.css" rel="stylesheet" />
 <link href="./css/style.css" rel="stylesheet" />
 
 <script src="./js/ready.js"></script>
