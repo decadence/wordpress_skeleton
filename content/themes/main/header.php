@@ -15,12 +15,11 @@ if(!defined("ABSPATH"))
 
 <base href="<?=$theme_path?>" />
 
-<title></title>
+<title>Site</title>
 
-<link href="./css/reset.css" rel="stylesheet" />
-<link href="./css/style.css" rel="stylesheet" />
-
-<script src="./js/ready.js"></script>
+<link href="/min/?g=css" rel="stylesheet" />
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="/min/?g=js"></script>
 
 
 </head>
