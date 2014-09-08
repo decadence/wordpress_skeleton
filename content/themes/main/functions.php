@@ -5,7 +5,7 @@ if(!defined("ABSPATH"))
 }
 
 // полный URL к теме
-$theme_path = get_template_directory_uri() . '/';
+define('THEME_PATH', get_template_directory_uri() . '/');
 
 
 
