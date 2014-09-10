@@ -13,7 +13,7 @@ if(!defined("ABSPATH"))
 <meta charset="utf-8" />
 
 
-<base href="<?=$theme_path?>" />
+<base href="<?=THEME_PATH?>" />
 
 <title>Site</title>
 
