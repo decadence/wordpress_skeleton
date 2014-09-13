@@ -21,6 +21,9 @@ if(!defined("ABSPATH"))
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="/min/?g=js"></script>
 
+<?
+	wp_head();
+?>
 
 </head>
 

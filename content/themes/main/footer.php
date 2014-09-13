@@ -10,6 +10,10 @@ if(!defined("ABSPATH"))
 Футер
 </footer>
 
+
+<?
+	wp_footer();
+?>
 </body>
 
 
