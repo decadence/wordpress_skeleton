@@ -1,5 +1,12 @@
+# общие правила
 content/uploads/
 content/upgrade/
 content/cache/
 content/backups/
+
+
+
+# плагины
+readme.txt
+screenshot-*.png
 
