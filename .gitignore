@@ -4,18 +4,17 @@ content/upgrade/
 content/cache/
 content/backups/
 
-
-
 # плагины
 readme.txt
+README.txt
 screenshot-*.png
+README.md
+readme.md
 
-#языковые файлы плагинов
+#языковые файлы плагинов и стандартных тем
 content/plugins/**/*.mo
 content/plugins/**/*.pot
 content/plugins/**/*.po
-
 languages/plugins/
 languages/themes/
-
 
