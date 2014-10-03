@@ -10,3 +10,12 @@ content/backups/
 readme.txt
 screenshot-*.png
 
+#языковые файлы плагинов
+content/plugins/**/*.mo
+content/plugins/**/*.pot
+content/plugins/**/*.po
+
+languages/plugins/
+languages/themes/
+
+
