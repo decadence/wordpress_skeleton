@@ -14,4 +14,8 @@ define('WPLANG', 'ru_RU');
 define("LOCALHOST", $_SERVER["REMOTE_ADDR"] == "127.0.0.1");
 define("WP_DEBUG", LOCALHOST);
 
+// активируем MySQLi
+define("WP_USE_EXT_MYSQL", false);
+
+
 
