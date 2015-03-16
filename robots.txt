@@ -1,0 +1,31 @@
+User-agent: *
+Disallow: /wp/wp-admin
+Disallow: /wp/wp-includes
+Disallow: /content/plugins
+Disallow: /content/cache
+Disallow: /content/themes
+Disallow: /trackback
+Disallow: */trackback
+Disallow: */*/trackback
+Disallow: */*/feed/*/
+Disallow: */feed
+Disallow: /*?*
+Disallow: /tag
+
+User-agent: Yandex
+Disallow: /cgi-bin
+Disallow: /wp/wp-admin
+Disallow: /wp/wp-includes
+Disallow: /content/plugins
+Disallow: /content/cache
+Disallow: /content/themes
+Disallow: /trackback
+Disallow: */trackback
+Disallow: */*/trackback
+Disallow: */*/feed/*/
+Disallow: */feed
+Disallow: /*?*
+Disallow: /tag
+
+Host: www.host.ru
+Sitemap: http://www.host.ru/sitemap.xml
