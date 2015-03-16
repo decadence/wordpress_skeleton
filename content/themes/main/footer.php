@@ -3,7 +3,7 @@ if(!defined("ABSPATH"))
 {
 	exit;
 }
-// русский коммент
+
 ?>
 
 <footer>
