@@ -11,7 +11,7 @@ screenshot-*.png
 README.md
 readme.md
 
-#языковые файлы плагинов и стандартных тем
+# языковые файлы плагинов и стандартных тем
 content/plugins/**/*.mo
 content/plugins/**/*.pot
 content/plugins/**/*.po

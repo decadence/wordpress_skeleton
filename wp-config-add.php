@@ -9,11 +9,9 @@ define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/content');
 define('WP_DEFAULT_THEME', 'main');
 define('WPLANG', 'ru_RU');
 
+
 // просматриваем ли мы сайт с локального компьютера
 define("LOCALHOST", $_SERVER["REMOTE_ADDR"] == "127.0.0.1");
-
-
-
 define("WP_DEBUG", LOCALHOST);
 
 
