@@ -13,7 +13,11 @@ if(!defined("ABSPATH"))
 
 <base href="<?=THEME_PATH?>" />
 
-<title>Site</title>
+<title>
+	<?=wp_title("", false)?>
+</title>
+
+<meta name="description" content="<?=get_bloginfo("description")?>" />
 
 <link href="/min/?g=css" rel="stylesheet" />
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>

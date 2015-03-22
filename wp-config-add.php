@@ -1,6 +1,6 @@
 <?
 
-// добавить содержимое этого файла в перенесенный wp-config.php
+// добавить содержимое этого файла в перенесенный в корень wp-config.php
 
 define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp');
 define('WP_HOME', 'http://' . $_SERVER['SERVER_NAME']);

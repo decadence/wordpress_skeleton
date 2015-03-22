@@ -29,3 +29,5 @@ Disallow: /tag
 
 Host: www.host.ru
 Sitemap: http://www.host.ru/sitemap.xml
+
+

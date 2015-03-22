@@ -1,15 +1,35 @@
-# общие правила
+# общие правила WordPress
 content/uploads/
 content/upgrade/
 content/cache/
 content/backups/
+content/advanced-cache.php
+content/backup-db/
+content/blogs.dir/
+content/wp-cache-config.php
+content/plugins/hello.php
+sitemap.xml
+sitemap.xml.gz
+
+# временные файлы
+*.log
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
 
 # плагины
 readme.txt
 README.txt
 screenshot-*.png
+screenshot.png
 README.md
 readme.md
+
+# но файл в корне оставляем
+!/README.md
 
 # языковые файлы плагинов и стандартных тем
 content/plugins/**/*.mo
@@ -18,6 +38,14 @@ content/plugins/**/*.po
 languages/plugins/
 languages/themes/
 
+
 # PHPStorm
 .idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+node_modules/
+
 
