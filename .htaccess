@@ -1,4 +1,5 @@
 # Placeholder для отсутствующих изображений
+# Помещать обязательно до WP правил, иначе до этого дело не дойдёт
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^.*(\.gif|\.jpe?g|\.png)$ placeholder.jpg [L]
 
@@ -11,7 +12,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
-
 # END WordPress
 
 
