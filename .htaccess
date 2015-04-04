@@ -15,8 +15,8 @@ RewriteRule . /index.php [L]
 # END WordPress
 
 
-# Защита .git файлов
-<Files ~ "\.git.*|.*\.md">
+# Защита .git файлов и статичных файлов WP
+<Files ~ "\.git.*|.*\.md|readme\.html|license\.txt">
 	Deny from all
 </Files>
 
