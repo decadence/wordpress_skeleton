@@ -6,6 +6,8 @@ if(!defined("ABSPATH")){
 // полный URL к теме
 define('THEME_PATH', get_template_directory_uri() . '/');
 
+define('ADMIN_EMAIL', 'brahman63@mail.ru');
+
 
 // отключение визуального редактора, чтобы избежать засорения контента при редактировании постов
 add_filter('user_can_richedit', '__return_false');
@@ -46,6 +48,21 @@ add_action("admin_head", function(){
 	<link href="<?=THEME_PATH?>/css/admin.css" rel="stylesheet" />
 <?
 });
+
+// логирование входов на сайт
+add_action("wp_login", function($login, $user){
+
+	if(LOCALHOST){
+		return;
+	}
+
+	$message = "Пользователь {$login} зашёл на сайт {$_SERVER['SERVER_NAME']} с IP: {$_SERVER['REMOTE_ADDR']}";
+
+	wp_mail(ADMIN_EMAIL, "Вход на сайт", $message);
+});
+
+
+
 
 
 
