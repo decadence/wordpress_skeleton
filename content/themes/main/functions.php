@@ -3,9 +3,19 @@ if(!defined("ABSPATH")){
 	exit;
 }
 
-// полный URL к теме
+/*
+ * полный URL к теме
+*/
 define('THEME_PATH', get_template_directory_uri() . '/');
 
+/*
+ * файловый путь к корню сайта
+*/
+define('ROOT', $_SERVER["DOCUMENT_ROOT"]);
+
+/*
+ * email администратора
+*/
 define('ADMIN_EMAIL', 'brahman63@mail.ru');
 
 
