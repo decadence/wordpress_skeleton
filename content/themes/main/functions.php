@@ -62,6 +62,9 @@ add_action("admin_head", function(){
 // логирование входов на сайт
 add_action("wp_login", function($login, $user){
 
+	// отключаем по умолчанию
+	return;
+
 	if(LOCALHOST){
 		return;
 	}
