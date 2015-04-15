@@ -16,8 +16,13 @@ RewriteRule . /index.php [L]
 
 
 # Защита .git файлов и статичных файлов WP
-<Files ~ "\.git.*|.*\.md|readme\.html|license\.txt">
-	Deny from all
+<Files ~ ".*\.md|readme\.html|license\.txt">
+	Deny From All
+</Files>
+
+# Защита скрытых файлов
+<Files .*>
+	Deny From All
 </Files>
 
 
