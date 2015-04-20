@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         uglify: {
             main: {
                 files: {
-                    'prod/production.min.js': scripts
+                    'prod/production.js': scripts
                 }
             }
         },
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         cssmin: {
             target: {
                 files: {
-                    'prod/production.min.css': styles
+                    'prod/production.css': styles
                 }
             }
         }

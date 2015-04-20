@@ -19,9 +19,8 @@ if(!defined("ABSPATH"))
 
 <meta name="description" content="<?=get_bloginfo("description")?>" />
 
-<link href="/min/?g=css" rel="stylesheet" />
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="/min/?g=js"></script>
+<link href="prod/production.css" rel="stylesheet" />
+<link href="prod/production.js" rel="stylesheet" />
 
 <?
 	wp_head();
