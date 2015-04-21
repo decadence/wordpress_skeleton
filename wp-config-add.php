@@ -15,4 +15,8 @@ define("WP_DEBUG", LOCALHOST);
 define("WP_USE_EXT_MYSQL", false);
 
 
+// отключение автоматического обновления ядра, мы делаем это через Git
+define("WP_AUTO_UPDATE_CORE", false);
+
+
 
