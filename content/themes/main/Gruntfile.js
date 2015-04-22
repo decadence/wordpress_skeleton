@@ -9,6 +9,7 @@ var styles = [
 ];
 
 var tasks = [
+    "grunt-contrib-watch",
     "grunt-autoprefixer",
     "grunt-contrib-uglify",
     "grunt-contrib-cssmin"
@@ -19,6 +20,22 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        watch: {
+            options: {
+
+            },
+           
+            scripts: {
+                files: scripts,
+                tasks: ['uglify']
+            },
+
+            styles: {
+                files: styles,
+                tasks: ['cssmin', 'autoprefixer']
+            }
+        },
 
         uglify: {
             options: {
@@ -61,7 +78,7 @@ module.exports = function(grunt) {
         grunt.loadNpmTasks(tasks[i]);
     }
 
-    grunt.registerTask('default', ['uglify', 'cssmin', 'autoprefixer']);
+    grunt.registerTask('default', ['watch', 'uglify', 'cssmin', 'autoprefixer']);
 };
 
 
