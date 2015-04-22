@@ -8,9 +8,9 @@
 
 ## Серверные настройки
 ### Apache + Nginx
-+ Отдача картинки по умолчанию  
++ подключить файл nginx-wp.conf в нужном контексте
 
-		try_files $uri /placeholder.jpg;
+	Vesta: в location / {} над регуляркой для статики, вынести root в настройки server.
 
 
 

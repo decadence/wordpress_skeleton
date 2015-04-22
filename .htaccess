@@ -1,8 +1,3 @@
-# Placeholder для отсутствующих изображений
-# Помещать обязательно до WP правил, иначе до этого дело не дойдёт
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^.*(\.gif|\.jpe?g|\.png)$ placeholder.jpg [L]
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -13,19 +8,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
-
-
-# Защита .git файлов и статичных файлов WP
-<Files ~ ".*\.md|readme\.html|license\.txt">
-	Deny From All
-</Files>
-
-# Защита скрытых файлов
-<Files .*>
-	Deny From All
-</Files>
-
-
-
 
 
