@@ -9,6 +9,7 @@ var styles = [
 ];
 
 var tasks = [
+    "grunt-autoprefixer",
     "grunt-contrib-uglify",
     "grunt-contrib-cssmin"
 ];
@@ -20,6 +21,10 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         uglify: {
+            options: {
+
+            },
+
             main: {
                 files: {
                     'prod/production.js': scripts
@@ -28,20 +33,35 @@ module.exports = function(grunt) {
         },
 
         cssmin: {
-            target: {
+            options: {
+
+            },
+
+            main: {
                 files: {
                     'prod/production.css': styles
                 }
             }
-        }
+        },
 
+        autoprefixer: {
+            options: {
+
+            },
+            
+            main: {
+                files: {
+                    'prod/production.css': 'prod/production.css'
+                }
+            }
+        }
     });
 
     for(var i = 0; i < tasks.length; i++){
         grunt.loadNpmTasks(tasks[i]);
     }
 
-    grunt.registerTask('default', ['uglify', 'cssmin']);
+    grunt.registerTask('default', ['uglify', 'cssmin', 'autoprefixer']);
 };
 
 
