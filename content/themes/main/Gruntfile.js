@@ -1,13 +1,22 @@
+/*
+ * Список скриптов
+ */
 var scripts = [
     'js/test.js',
     'js/ready.js'
 ];
 
+/*
+ * Список стилей
+ */
 var styles = [
     'css/reset.css',
     'css/style.css'
 ];
 
+/*
+ * Список загружаемых Node.js модулей.
+ */
 var tasks = [
     "grunt-contrib-watch",
     "grunt-autoprefixer",
@@ -15,6 +24,15 @@ var tasks = [
     "grunt-contrib-cssmin"
 ];
 
+/*
+ * Список задач для стандартной задачи
+ */
+var defaultTask = [
+    //'watch', 
+    'uglify', 
+    'cssmin', 
+    'autoprefixer'
+];
 
 module.exports = function(grunt) {
 
@@ -78,7 +96,7 @@ module.exports = function(grunt) {
         grunt.loadNpmTasks(tasks[i]);
     }
 
-    grunt.registerTask('default', ['watch', 'uglify', 'cssmin', 'autoprefixer']);
+    grunt.registerTask('default', defaultTask);
 };
 
 
