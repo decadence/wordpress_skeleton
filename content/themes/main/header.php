@@ -1,6 +1,5 @@
 <?
-if(!defined("ABSPATH"))
-{
+if(!defined("ABSPATH")){
 	exit;
 }
 ?>
@@ -17,6 +16,13 @@ if(!defined("ABSPATH"))
 	<?=wp_title("", false)?>
 </title>
 
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="/favicon.ico" rel="shortcut icon"  />
+<link href="/favicon.ico" rel="icon" type="image/x-icon" />
+
 <meta name="description" content="<?=get_bloginfo("description")?>" />
 
 <link href="prod/production.css" rel="stylesheet" />
@@ -30,6 +36,15 @@ if(!defined("ABSPATH"))
 
 
 <body>
+
+<!--[if lt IE 8]>
+	<p class="browserupgrade">
+		You are using an <strong>outdated</strong> browser.
+		Please
+		<a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience
+	</p>
+<![endif]-->
+
 Хидер
 
 
