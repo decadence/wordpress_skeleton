@@ -2,7 +2,6 @@
  * Список скриптов
  */
 var scripts = [
-    'js/test.js',
     'js/ready.js'
 ];
 
@@ -18,20 +17,22 @@ var styles = [
  * Список загружаемых Node.js модулей.
  */
 var tasks = [
-    "grunt-contrib-watch",
+    //"grunt-contrib-watch",
     "grunt-autoprefixer",
     "grunt-contrib-uglify",
-    "grunt-contrib-cssmin"
+    "grunt-contrib-cssmin",
+    //"grunt-contrib-imagemin"
 ];
 
 /*
  * Список задач для стандартной задачи
  */
 var defaultTask = [
-    //'watch', 
-    'uglify', 
-    'cssmin', 
-    'autoprefixer'
+    //"watch", 
+    "uglify", 
+    "cssmin", 
+    "autoprefixer",
+    //"imagemin"
 ];
 
 module.exports = function(grunt) {
@@ -90,6 +91,17 @@ module.exports = function(grunt) {
                 files: {
                     'prod/production.css': 'prod/production.css'
                 }
+            }
+        },
+
+        imagemin: {
+            main: {
+                files: [{
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'prod/img/'
+                }]
             }
         }
     });
