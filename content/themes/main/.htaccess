@@ -1,6 +1,0 @@
-# Защита прямого обращения к PHP-файлам в папке темы
-<Files ~ "^.*\.php$">
-	Deny from All
-	#RedirectMatch .* /
-</Files>
-
