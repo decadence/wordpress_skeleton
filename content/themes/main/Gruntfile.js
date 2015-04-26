@@ -21,6 +21,7 @@ var tasks = [
     "grunt-autoprefixer",
     "grunt-contrib-uglify",
     "grunt-contrib-cssmin",
+    "grunt-contrib-jshint",
     //"grunt-contrib-imagemin"
 ];
 
@@ -28,9 +29,10 @@ var tasks = [
  * Список задач для стандартной задачи
  */
 var defaultTask = [
-    //"watch", 
-    "uglify", 
-    "cssmin", 
+    //"watch",
+    "jshint",
+    "uglify",
+    "cssmin",
     "autoprefixer",
     //"imagemin"
 ];
@@ -57,6 +59,12 @@ module.exports = function(grunt) {
                 tasks: ['cssmin', 'autoprefixer']
             }
         },
+
+        jshint: {
+            main: {
+                src: scripts
+            }
+        }
 
         uglify: {
             options: {
