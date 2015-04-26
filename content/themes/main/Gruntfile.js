@@ -22,6 +22,7 @@ var tasks = [
     "grunt-contrib-uglify",
     "grunt-contrib-cssmin",
     "grunt-contrib-jshint",
+    "grunt-contrib-csslint",
     //"grunt-contrib-imagemin"
 ];
 
@@ -31,6 +32,7 @@ var tasks = [
 var defaultTask = [
     //"watch",
     "jshint",
+    "csslint",
     "uglify",
     "cssmin",
     "autoprefixer",
@@ -64,7 +66,12 @@ module.exports = function(grunt) {
             main: {
                 src: scripts
             }
-        }
+        },
+
+        csslint: {
+            main: styles
+        },
+
 
         uglify: {
             options: {
