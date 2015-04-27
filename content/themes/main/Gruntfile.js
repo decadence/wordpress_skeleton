@@ -23,6 +23,7 @@ var tasks = [
     "grunt-contrib-cssmin",
     "grunt-contrib-jshint",
     "grunt-contrib-csslint",
+    "grunt-spritesmith",
     //"grunt-contrib-imagemin"
 ];
 
@@ -31,6 +32,7 @@ var tasks = [
  */
 var defaultTask = [
     //"watch",
+    "sprite",
     "jshint",
     "csslint",
     "uglify",
@@ -59,6 +61,15 @@ module.exports = function(grunt) {
             styles: {
                 files: styles,
                 tasks: ['cssmin', 'autoprefixer']
+            }
+        },
+
+        sprite: {
+            all: {
+                src: 'img/sprite/*.{jpg,png}',
+                dest: 'prod/spritesheet.png',
+                destCss: 'prod/sprites.css',
+                padding: 10
             }
         },
 
