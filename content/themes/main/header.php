@@ -13,7 +13,7 @@ if(!defined("ABSPATH")){
 <base href="<?=THEME_PATH?>" />
 
 <title>
-	<?=wp_title("", false)?>
+	<?=wp_title("", false)?> / <?=get_bloginfo("name")?>
 </title>
 
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,7 +26,7 @@ if(!defined("ABSPATH")){
 <meta name="description" content="<?=get_bloginfo("description")?>" />
 
 <link href="prod/production.css" rel="stylesheet" />
-<link href="prod/production.js" rel="stylesheet" />
+<script type="text/javascript" src="prod/production.js"></script>
 
 <?
 	wp_head();

@@ -72,7 +72,7 @@ add_action("wp_login", function($login, $user){
 	$message = "Пользователь {$login} зашёл на сайт {$_SERVER['SERVER_NAME']} с IP: {$_SERVER['REMOTE_ADDR']}";
 
 	wp_mail(ADMIN_EMAIL, "Вход на сайт", $message);
-});
+}, 10, 2);
 
 
 
