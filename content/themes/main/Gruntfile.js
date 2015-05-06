@@ -69,7 +69,8 @@ module.exports = function(grunt) {
                 src: 'img/sprite/*.{jpg,png}',
                 dest: 'prod/spritesheet.png',
                 destCss: 'prod/sprites.css',
-                padding: 10
+                padding: 10,
+                algorithm: "top-down"
             }
         },
 

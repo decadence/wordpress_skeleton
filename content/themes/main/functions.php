@@ -9,6 +9,11 @@ if(!defined("ABSPATH")){
 define('THEME_PATH', get_template_directory_uri() . '/');
 
 /*
+ * полный путь к папке темы
+*/
+define('THEME_FULL_PATH', get_template_directory_uri() . '/');
+
+/*
  * файловый путь к корню сайта
 */
 define('ROOT', $_SERVER["DOCUMENT_ROOT"]);
