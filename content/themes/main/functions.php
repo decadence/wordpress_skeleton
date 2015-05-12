@@ -135,9 +135,6 @@ function include_template($params, $name, $return = false)
 	return false;
 }
 
-
-
-
 /*
  * Безопасное получение значения из массива или возврат стандартного значения
 */
@@ -147,6 +144,20 @@ function get_array_value($ar, $name, $default = ""){
 	}
 
 	return $default;
+}
+
+/*
+ * Подключение меню
+*/
+function include_menu($menu_id = "header-menu", $template = "templates/menu.php")
+{
+	$locations = get_nav_menu_locations();
+	$menu_id = $locations[$menu_id];
+	$items = wp_get_nav_menu_items($menu_id);
+
+	include_template(array(
+		"items" => $items
+	), $template);	
 }
 
 
