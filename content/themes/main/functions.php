@@ -23,6 +23,11 @@ define('ROOT', $_SERVER["DOCUMENT_ROOT"]);
 */
 define('ADMIN_EMAIL', 'brahman63@mail.ru');
 
+/*
+ * email, на который идёт отправка писем обратной связи
+*/
+define('TARGET_EMAIL', 'brahman63@mail.ru');
+
 
 // отключение визуального редактора, чтобы избежать засорения контента при редактировании постов
 add_filter('user_can_richedit', '__return_false');
@@ -90,19 +95,29 @@ add_action("wp_login", function($login, $user){
  * @param $return bool
  * Возвращать результат или печатать (false, по умолчанию)
  * @return bool Успешно ли подключен шаблон
- */
+ *
+ * использование
+ * $data = array(
+ *		"string" => "Hello",
+ *		"array" => array(1,2,3),
+ *		"object" => $wp_query
+ * );
+ *
+ * include_template($data, "test.php");
+*/
 function include_template($params, $name, $return = false)
 {
-	// извлекаем параметры
+	// извлекаем параметры, создавая локальные для этой функции переменные
 	extract($params);
 
 	// пытаемся найти шаблон
 	$template = locate_template("{$name}.php");
 
-	// если шаблон найден, подключаем его, при этом делаем include вручную, чтобы не уходить ещё глубже (подключение будет внутри ещё одной функции, мы не увидим переменные оттуда)
+	// шаблон найден
 	if($template){
 		ob_start();
 		
+		// делаем include вручную, чтобы не уходить ещё глубже (подключение через get_template_part будет внутри ещё одной функции, мы не увидим переменные оттуда)
 		include($template);
 
 		$result = ob_get_clean();
@@ -111,27 +126,16 @@ function include_template($params, $name, $return = false)
 			return $result;
 		}
 
-		// по умолчанию просто распечатываем результат
+		// по умолчанию просто распечатываем результат и возвращаем true
 		echo $result;
 		return true;
-
-
 	}
 
 	// иначе терпим неудачу
 	return false;
 }
 
-/* использование
-$data = array(
-	"string" => "Hello",
-	"array" => array(1,2,3),
-	"object" => $wp_query
-);
 
-include_template($data, "test.php");
-
-*/
 
 
 /*

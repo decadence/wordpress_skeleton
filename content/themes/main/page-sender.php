@@ -11,6 +11,8 @@ if(!$_POST){
 	exit;
 }
 
+// TODO проверка на обязательные значения
+
 header("Content-Type: application/json");
 
 $status = 202;
@@ -32,7 +34,7 @@ end_request(array(
 
 
 /**
- * Пишет ответ и завершает работу скрипта
+ * Отсылает ответ клиенту и завершает работу скрипта
  * @param $result
  */
 function end_request($result)
