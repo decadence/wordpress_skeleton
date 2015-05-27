@@ -4,6 +4,8 @@ sitemap.xml.gz
 *.sql
 *.tar.gz
 
+.htpasswd
+
 # временные файлы
 *.log
 .DS_Store
