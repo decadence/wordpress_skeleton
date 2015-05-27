@@ -1,6 +1,9 @@
 sitemap.xml
 sitemap.xml.gz
 
+*.sql
+*.tar.gz
+
 # временные файлы
 *.log
 .DS_Store
