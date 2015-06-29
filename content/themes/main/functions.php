@@ -160,6 +160,46 @@ function include_menu($menu_id = "header-menu", $template = "templates/menu.php"
 	), $template);	
 }
 
+/**
+ * Правильное склонение окончаний для разных чисел
+ * @param $number Номер для склонения
+ * @param $endingArray массив вариантов для склонения: именительный, родительный, родительный множественный.
+ * Например, array("белый кролик", "белых кролика", "белых кроликов")
+ * @return mixed
+ */
+function getNumEnding($number, $endingArray)
+{
+	$number = $number % 100;
+
+	if ($number >= 11 && $number <= 19){
+		return $endingArray[2];
+	}
+
+	$i = $number % 10;
+
+	switch ($i)	{
+
+	case 1:
+		$ending = $endingArray[0];
+		break;
+
+	case 2:
+	case 3:
+	case 4: 
+		$ending = $endingArray[1];
+		break;
+
+	default:
+		$ending = $endingArray[2];
+		break;		
+	}
+
+	return $ending;
+}
+
+
+
+
 
 
 
