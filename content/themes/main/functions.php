@@ -90,8 +90,8 @@ add_action("wp_login", function($login, $user){
  * Чтобы не держать код с разметкой в функциях
  * @param $params array
  * Массив с параметрами
- * @param $name array|string
- * Имя шаблона (или массив имён в порядке убывания приоритета)
+ * @param $name string
+ * Имя шаблона без расширения
  * @param $return bool
  * Возвращать результат или печатать (false, по умолчанию)
  * @return bool Успешно ли подключен шаблон
@@ -103,7 +103,7 @@ add_action("wp_login", function($login, $user){
  *		"object" => $wp_query
  * );
  *
- * include_template($data, "test.php");
+ * include_template($data, "test");
 */
 function include_template($params, $name, $return = false)
 {
