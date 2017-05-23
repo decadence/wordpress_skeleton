@@ -1,9 +1,9 @@
 User-agent: *
-Disallow: /wp/wp-admin
-Disallow: /wp/wp-includes
-Disallow: /content/plugins
-Disallow: /content/cache
-Disallow: /content/themes
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/plugins
+Disallow: /wp-content/cache
+Disallow: /wp-content/themes
 Disallow: /trackback
 Disallow: */trackback
 Disallow: */*/trackback
@@ -14,11 +14,11 @@ Disallow: /tag
 
 User-agent: Yandex
 Disallow: /cgi-bin
-Disallow: /wp/wp-admin
-Disallow: /wp/wp-includes
-Disallow: /content/plugins
-Disallow: /content/cache
-Disallow: /content/themes
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/plugins
+Disallow: /wp-content/cache
+Disallow: /wp-content/themes
 Disallow: /trackback
 Disallow: */trackback
 Disallow: */*/trackback
