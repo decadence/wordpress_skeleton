@@ -3,10 +3,6 @@
 	Template Name: Redirector
 	Шаблон страницы, которая перенаправляет на своего первого ребёнка или на главную, если детей нет.
 */
-if (!defined("ABSPATH")){
-	exit;
-}
-
 $page_id = get_queried_object_id();
 
 $children = get_pages(array(

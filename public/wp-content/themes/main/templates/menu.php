@@ -2,11 +2,6 @@
 /**
  * Шаблон вывода меню
 */
-
-if(!defined("ABSPATH")){
-	exit;
-}
-
 ?>
 
 <ul class="main-menu">

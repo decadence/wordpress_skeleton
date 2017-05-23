@@ -1,13 +1,10 @@
 <?
-if(!defined("ABSPATH")){
-	exit;
-}
-
 get_header();
 ?>
-404
-Не найдено
 
+    404
+    <br>
+    Не найдено
 
 <?
 get_footer();

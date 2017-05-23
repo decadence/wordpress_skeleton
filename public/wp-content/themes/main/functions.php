@@ -1,8 +1,4 @@
 <?
-if (!defined("ABSPATH")) {
-    exit;
-}
-
 /*
  * полный URL к теме
 */
@@ -198,6 +194,17 @@ function getNumEnding($number, $endingArray)
     }
 
     return $ending;
+}
+
+/**
+ * Отсылает ответ клиенту и завершает работу скрипта
+ * @param $result
+ */
+function json($result)
+{
+    header("Content-Type: application/json");
+    echo json_encode($result);
+    exit;
 }
 
 
