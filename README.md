@@ -1,10 +1,10 @@
 # WordPress Blank Theme
-WordPress тема с некоторыми заготовками для разработки с Git.  
+WordPress тема с некоторыми заготовками для разработки с Git и Composer.
 
 ## Общие сведения:
-+ WordPress распаковывается в папку /public, куда должен быть настроен Document Root, по желанию игнорируется
-+ В wp-config.php добавить данные из wp-config-add.php
-+ Запретить прямое обращение к любым php файлам кроме index.php
++ `DOCUMENT_ROOT` в папке `/public`
++ `wp-config.php` находится в `vendor/wordpress`.
++ Запретить прямое обращение к любым php файлам кроме `index.php`.
 
 
 

@@ -1,16 +1,22 @@
 {
+	"name": "decadence/wordpress",
+    "description": "WordPress blank theme with Composer support",
+    "type": "project",	
 	"require": {
+		"php": ">=5.6.1"
 		"wordpress/wordpress": "4.8.1"
 	},
-	"repositories": [{
-		"type": "package",
-		"package": {
-			"name": "wordpress/wordpress",
-			"version": "4.8.1",
-			"dist": {
-				"url": "https://github.com/WordPress/WordPress/archive/4.8.1.zip",
-				"type": "zip"
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "wordpress/wordpress",
+				"version": "4.8.1",
+				"dist": {
+					"url": "https://github.com/WordPress/WordPress/archive/4.8.1.zip",
+					"type": "zip"
+				}
 			}
 		}
-	}]
+	]
 }
