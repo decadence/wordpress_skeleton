@@ -5,10 +5,8 @@
 <meta charset="utf-8" />
 
 <title>
-	<?=wp_title("", false)?> / <?=get_bloginfo("name")?>
+	<?= wp_title("", false) ?> / <?= get_bloginfo("name") ?>
 </title>
-
-<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,27 +14,22 @@
 <link href="/favicon.ico" rel="shortcut icon"  />
 <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 
-<meta name="description" content="<?=get_bloginfo("description")?>" />
+<meta name="description" content="<?= get_bloginfo("description")?> " />
 
-<link href="<?=THEME_PATH?>/css/reset.css" rel="stylesheet" />
-<link href="<?=THEME_PATH?>/css/style.css" rel="stylesheet" />
-<link href="<?=THEME_PATH?>/css/medias.css" rel="stylesheet" />
+<link href="<?= THEME_PATH ?>/css/reset.css" rel="stylesheet" />
+<link href="<?= THEME_PATH ?>/css/style.css" rel="stylesheet" />
+<link href="<?= THEME_PATH ?>/css/medias.css" rel="stylesheet" />
 
-<script
-  src="http://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<script src="<?=THEME_PATH?>/js/ready.js"></script>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="<?= THEME_PATH ?>/js/ready.js"></script>
 
 <?
-	wp_head();
+wp_head();
 ?>
 
 </head>
 
 
 <body>
-
-Хидер
 
 

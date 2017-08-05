@@ -3,8 +3,14 @@
     "description": "WordPress blank theme with Composer support",
     "type": "project",	
 	"require": {
-		"php": ">=5.6.1"
-		"wordpress/wordpress": "4.8.1"
+		"php": ">=5.6.10",
+		"wordpress/wordpress": "4.8.1",
+		"illuminate/support": "5.4.*"
+	},
+	"autoload": {
+		"files": [
+			"helpers.php"
+		]
 	},
 	"repositories": [
 		{
