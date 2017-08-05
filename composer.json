@@ -1,0 +1,16 @@
+{
+	"require": {
+		"wordpress/wordpress": "4.8.1"
+	},
+	"repositories": [{
+		"type": "package",
+		"package": {
+			"name": "wordpress/wordpress",
+			"version": "4.8.1",
+			"dist": {
+				"url": "https://github.com/WordPress/WordPress/archive/4.8.1.zip",
+				"type": "zip"
+			}
+		}
+	}]
+}

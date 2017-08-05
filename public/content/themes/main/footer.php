@@ -2,6 +2,7 @@
 Футер
 </footer>
 
+
 <?
 	wp_footer();
 ?>
