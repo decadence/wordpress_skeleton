@@ -1,3 +1,3 @@
 #!/bin/bash
 git pull --no-edit
-composer install
+composer install --no-dev

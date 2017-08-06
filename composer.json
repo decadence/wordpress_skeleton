@@ -14,9 +14,12 @@
 		"wpackagist-plugin/wp-mail-smtp": "0.10.1",
 		"wpackagist-plugin/ps-disable-auto-formatting": "1.0.10",
 		"wpackagist-plugin/google-sitemap-generator": "4.0.9",
-		"filp/whoops": "^2.1",
 		"wpackagist-plugin/w3-total-cache": "0.9.5.4",
 		"nesbot/carbon": "^1.22"
+	},
+	"require-dev": {
+		"filp/whoops": "^2.1",
+		"wpackagist-plugin/query-monitor": "2.13.4"
 	},
 	"autoload": {
 		"files": [

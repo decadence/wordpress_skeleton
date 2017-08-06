@@ -10,3 +10,4 @@
 /plugins
 *-cache.php
 w3tc-config
+db.php
