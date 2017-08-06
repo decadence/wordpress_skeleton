@@ -20,7 +20,7 @@
 	},
 	"extra": {
 		"installer-paths":{
-			"public/wordpress": ["wordpress/wordpress"],
+			"public/wp": ["wordpress/wordpress"],
 			"public/content/plugins/{$name}": ["type:wordpress-plugin"]
 		}
 	},
@@ -32,6 +32,7 @@
 		{
 			"type": "package",
 			"package": {
+				"type": "wordpress-plugin",
 				"name": "wordpress/wordpress",
 				"version": "4.8.1",
 				"dist": {
