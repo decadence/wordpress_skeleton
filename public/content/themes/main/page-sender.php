@@ -1,9 +1,9 @@
 <?
 /**
  * Отправка почты
-*/
-if(!$_POST){
-	exit;
+ */
+if (!$_POST) {
+    exit;
 }
 
 // TODO проверка на обязательные значения
@@ -17,14 +17,14 @@ $user_message = "Письмо от {$_POST["u_email"]}:
 {$_POST["u_message"]}
 ";
 
-if (wp_mail(TARGET_EMAIL, $_POST["u_theme"], $user_message)){
-	$status = 200;
-	$message = "Успешно отправлено";
+if (wp_mail(TARGET_EMAIL, $_POST["u_theme"], $user_message)) {
+    $status = 200;
+    $message = "Успешно отправлено";
 }
 
 end_request(array(
-	"status" => $status,
-	"message" => $message
+    "status" => $status,
+    "message" => $message
 ));
 
 
@@ -34,8 +34,8 @@ end_request(array(
  */
 function end_request($result)
 {
-	echo json_encode($result);
-	exit;
+    echo json_encode($result);
+    exit;
 }
 
 

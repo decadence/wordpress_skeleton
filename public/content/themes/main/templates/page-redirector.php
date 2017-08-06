@@ -7,10 +7,10 @@ Template Name: Redirector
 $page_id = get_queried_object_id();
 
 $children = get_pages(array(
-	'parent' => $page_id,
-	'hierarchical' => false,
-	'sort_column' => 'menu_order',
-	'sort_order' => 'ASC'
+    'parent' => $page_id,
+    'hierarchical' => false,
+    'sort_column' => 'menu_order',
+    'sort_order' => 'ASC'
 ));
 
 $redirect_url = $children ? get_permalink($children[0]->ID) : '/';

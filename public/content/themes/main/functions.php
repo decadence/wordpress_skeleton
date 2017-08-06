@@ -1,11 +1,11 @@
 <?
 
 // отключаем доступ к админке для не админов
-add_action('admin_init', function() {
-	if (!is_super_admin()) {
-		wp_redirect('/'); 
-		exit;
-	}
+add_action('admin_init', function () {
+    if (!is_super_admin()) {
+        wp_redirect('/');
+        exit;
+    }
 });
 
 /*
@@ -58,34 +58,33 @@ remove_action('wp_head', 'start_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
 register_nav_menus(array(
-	'header-menu' => 'Верхнее меню'
+    'header-menu' => 'Верхнее меню'
 ));
 
 // прячем пункты меню админки на проде
-add_action("admin_head", function(){
-	if(LOCALHOST) {
-		return;
-	}
-?>
-	<link href="<?=THEME_PATH?>/css/admin.css" rel="stylesheet" />
-<?
+add_action("admin_head", function () {
+    if (LOCALHOST) {
+        return;
+    }
+    ?>
+    <link href="<?= THEME_PATH ?>/css/admin.css" rel="stylesheet"/>
+    <?
 });
 
 // логирование входов на сайт
-add_action("wp_login", function($login, $user){
+add_action("wp_login", function ($login, $user) {
 
-	// отключаем по умолчанию
-	return;
+    // отключаем по умолчанию
+    return;
 
-	if(LOCALHOST) {
-		return;
-	}
+    if (LOCALHOST) {
+        return;
+    }
 
-	$message = "Пользователь {$login} зашёл на сайт {$_SERVER['SERVER_NAME']} с IP: {$_SERVER['REMOTE_ADDR']}";
+    $message = "Пользователь {$login} зашёл на сайт {$_SERVER['SERVER_NAME']} с IP: {$_SERVER['REMOTE_ADDR']}";
 
-	wp_mail(ADMIN_EMAIL, "Вход на сайт", $message);
+    wp_mail(ADMIN_EMAIL, "Вход на сайт", $message);
 }, 10, 2);
-
 
 
 /*
@@ -93,13 +92,13 @@ add_action("wp_login", function($login, $user){
 */
 function include_menu($menu_id = "header-menu", $template = "templates/menu.php")
 {
-	$locations = get_nav_menu_locations();
-	$menu_id = $locations[$menu_id];
-	$items = wp_get_nav_menu_items($menu_id);
+    $locations = get_nav_menu_locations();
+    $menu_id = $locations[$menu_id];
+    $items = wp_get_nav_menu_items($menu_id);
 
-	include_template(array(
-		"items" => $items
-	), $template);	
+    include_template(array(
+        "items" => $items
+    ), $template);
 }
 
 

@@ -9,39 +9,39 @@
  *
  * Использование
  * $data = [
- *		"string" => "Hello",
- *		"array" => array(1,2,3),
- *		"object" => $wp_query
+ *        "string" => "Hello",
+ *        "array" => array(1,2,3),
+ *        "object" => $wp_query
  * ];
  *
  * include_template($data, "test");
-*/
+ */
 function include_template($params, $name, $return = false)
 {
-	// извлекаем параметры, создавая локальные для этой функции переменные
-	extract($params);
+    // извлекаем параметры, создавая локальные для этой функции переменные
+    extract($params);
 
-	// пытаемся найти шаблон
-	$template = locate_template("{$name}.php");
+    // пытаемся найти шаблон
+    $template = locate_template("{$name}.php");
 
-	// шаблон найден
-	if($template){
-		ob_start();
-		
-		// делаем include вручную, чтобы не уходить ещё глубже (подключение через get_template_part будет внутри ещё одной функции, мы не увидим переменные оттуда)
-		include($template);
+    // шаблон не найден
+    if (!$template) {
+        return false;
+    }
 
-		$result = ob_get_clean();
+    ob_start();
 
-		if($return){
-			return $result;
-		}
+    // делаем include вручную, чтобы не уходить ещё глубже (подключение через get_template_part будет внутри ещё одной функции, мы не увидим переменные оттуда)
+    include($template);
 
-		// по умолчанию просто распечатываем результат и возвращаем true
-		echo $result;
-		return true;
-	}
+    $result = ob_get_clean();
 
-	// иначе терпим неудачу
-	return false;
+    if ($return) {
+        return $result;
+    }
+
+    // по умолчанию просто распечатываем результат и возвращаем true
+    echo $result;
+    return true;
 }
+
