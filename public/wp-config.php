@@ -1,6 +1,5 @@
 <?
-define('WP_CACHE', true);
-
+define("WP_CACHE", false);
 /**
  * Файловый путь к корню сайта
  */

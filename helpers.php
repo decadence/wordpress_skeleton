@@ -72,7 +72,7 @@ function remember($key, $expire, $callback, $group = "")
     }
 
     $value = $callback();
-    wp_cache_set($key, $value, $group, $expire * 1);
+    wp_cache_set($key, $value, $group, $expire * 60);
     return $value;
 }
 
