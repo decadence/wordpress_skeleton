@@ -11,7 +11,8 @@
 		"wpackagist-plugin/custom-post-type-ui": "1.5.5",
 		"wpackagist-plugin/wp-pagenavi": "2.92",
 		"wpackagist-plugin/breadcrumb-navxt": "5.7.1",
-		"wpackagist-plugin/wp-mail-smtp": "0.10.1"
+		"wpackagist-plugin/wp-mail-smtp": "0.10.1",
+		"wpackagist-plugin/ps-disable-auto-formatting": "1.0.10"
 	},
 	"autoload": {
 		"files": [
