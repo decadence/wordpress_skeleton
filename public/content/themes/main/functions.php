@@ -1,5 +1,13 @@
 <?
 
+// подключение whoops только на LOCALHOST
+if (LOCALHOST) {
+    $whoops = new \Whoops\Run;
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $whoops->register();
+}
+
+
 // отключаем доступ к админке для не админов
 add_action('admin_init', function () {
     if (!is_super_admin()) {
@@ -17,11 +25,6 @@ define('THEME_PATH', get_template_directory_uri() . '/');
  * полный путь к папке темы
 */
 define('THEME_FULL_PATH', get_template_directory_uri());
-
-/*
- * файловый путь к корню сайта
-*/
-define('ROOT', $_SERVER["DOCUMENT_ROOT"]);
 
 /*
  * email администратора

@@ -1,6 +1,6 @@
 {
 	"name": "decadence/wordpress",
-    "description": "WordPress blank theme with Composer support",
+    "description": "WordPress blank theme with Composer support with some plugins and packages",
     "type": "project",
 	"require": {
 		"php": ">=5.6.10",
@@ -12,7 +12,9 @@
 		"wpackagist-plugin/wp-pagenavi": "2.92",
 		"wpackagist-plugin/breadcrumb-navxt": "5.7.1",
 		"wpackagist-plugin/wp-mail-smtp": "0.10.1",
-		"wpackagist-plugin/ps-disable-auto-formatting": "1.0.10"
+		"wpackagist-plugin/ps-disable-auto-formatting": "1.0.10",
+		"wpackagist-plugin/google-sitemap-generator": "4.0.9",
+		"filp/whoops": "^2.1"
 	},
 	"autoload": {
 		"files": [
