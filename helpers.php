@@ -45,3 +45,34 @@ function include_template($params, $name, $return = false)
     return true;
 }
 
+/**
+ * Включение Whoops
+ */
+function enable_whoops()
+{
+    $whoops = new \Whoops\Run;
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $whoops->register();
+}
+
+/**
+ * Получение значения из кеша
+ * @param string $key Ключ
+ * @param int $expire Количество минут
+ * @param callable $callback Функция для получения значения
+ * @param string $group Группа кеша
+ * @return bool|mixed
+ */
+function remember($key, $expire, $callback, $group = "")
+{
+    $value = wp_cache_get($key);
+
+    if ($value !== false) {
+        return $value;
+    }
+
+    $value = $callback();
+    wp_cache_set($key, $value, $group, $expire * 1);
+    return $value;
+}
+

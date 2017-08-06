@@ -8,3 +8,5 @@
 /blogs.dir
 /wp-cache-config.php
 /plugins
+*-cache.php
+w3tc-config

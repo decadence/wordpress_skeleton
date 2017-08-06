@@ -1,12 +1,9 @@
 <?
 
-// подключение whoops только на LOCALHOST
-if (LOCALHOST) {
-    $whoops = new \Whoops\Run;
-    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-    $whoops->register();
+// подключение whoops только на LOCALHOST и не для админки
+if (LOCALHOST && !is_admin()) {
+    enable_whoops();
 }
-
 
 // отключаем доступ к админке для не админов
 add_action('admin_init', function () {
