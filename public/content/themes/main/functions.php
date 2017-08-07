@@ -1,7 +1,7 @@
 <?
 
 // подключение whoops только на LOCALHOST и не для админки
-if (LOCALHOST && !is_admin()) {
+if (WHOOPS && !is_admin()) {
     enable_whoops();
 }
 

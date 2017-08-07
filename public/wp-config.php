@@ -20,16 +20,32 @@ define("LOCALHOST", $_SERVER["REMOTE_ADDR"] == "127.0.0.1");
  */
 define("PRODUCTION", !LOCALHOST);
 
+
 /**
  * Режим отладки
  */
 define("WP_DEBUG", LOCALHOST);
 
-// отключение вывода ошибок
-ini_set("display_errors", LOCALHOST ? "On" : "Off");
+define("WHOOPS", LOCALHOST);
 
-// путь к логу
-ini_set("error_log", BASE . "/error.log");
+if (!WHOOPS) {
+    // не нужно при использовании Whoops, так как он не записывает логи
+
+    // отображение ошибок
+    define("WP_DEBUG_DISPLAY", LOCALHOST);
+
+    // запись ошибок в content/debug.log
+    define("WP_DEBUG_LOG", LOCALHOST);
+
+    // произвольный путь к логу
+    // ini_set("error_log", BASE . "/error.log");
+}
+
+
+/**
+ * Сохранение запросов
+ */
+define("SAVEQUERIES", LOCALHOST);
 
 // задаём новые пути
 define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp');

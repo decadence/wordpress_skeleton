@@ -33,14 +33,5 @@
 
 <body>
 
-<?php
-//wp_cache_close()
-dump(remember("value", 10, function () {
-    $class = new stdClass();
-    sleep(3);
-    $class->number = rand(0, 1000);
-    return $class;
-}));
-?>
-
+<? ddddd();
 
