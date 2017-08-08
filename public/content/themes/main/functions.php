@@ -1,4 +1,6 @@
 <?
+// подключаем Composer здесь, чтобы его классы были доступны и в админке
+require(ROOT . "/../vendor/autoload.php");
 
 // подключение whoops только на LOCALHOST и не для админки
 if (WHOOPS && !is_admin()) {

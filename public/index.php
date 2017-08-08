@@ -1,6 +1,5 @@
 <?php
 define('WP_USE_THEMES', true);
-require("../vendor/autoload.php");
 $wordpressHeader = __DIR__ . '/wp/wp-blog-header.php';
 
 // проверяем наличие главного файла на случай,
