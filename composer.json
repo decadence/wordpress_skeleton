@@ -21,7 +21,8 @@
     },
     "require-dev": {
         "filp/whoops": "^2.1",
-        "wpackagist-plugin/query-monitor": "2.13.4"
+        "wpackagist-plugin/query-monitor": "2.13.4",
+        "wpackagist-plugin/advanced-cron-manager": "2.1.2"
     },
     "autoload": {
         "files": [
