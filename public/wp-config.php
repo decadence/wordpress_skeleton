@@ -1,9 +1,11 @@
-<?
+<?php
+
 define("WP_CACHE", false);
+
 /**
  * Файловый путь к корню сайта
  */
-define('ROOT', $_SERVER["DOCUMENT_ROOT"]);
+define('ROOT', __DIR__);
 
 /**
  * Путь к корню проекта
@@ -76,9 +78,8 @@ define('NONCE_SALT', '#SET_UNIQUE_STRING#');
 
 $table_prefix = 'wp_';
 
-if (!defined('ABSPATH')) {
+if (!defined('ABSPATH'))
     define('ABSPATH', dirname(__FILE__) . '/');
-}
 
 require_once(ABSPATH . 'wp-settings.php');
 
