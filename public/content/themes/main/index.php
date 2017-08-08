@@ -1,7 +1,7 @@
 <?
 get_header();
 ?>
-	Контент
+	Content
 <?
 get_footer();
 

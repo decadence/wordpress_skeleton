@@ -1,7 +1,6 @@
 <?
 get_header();
 ?>
-    Main Page
+    Page Content
 <?
 get_footer();
-
