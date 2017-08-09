@@ -52,7 +52,16 @@ function enable_whoops()
 {
     $whoops = new \Whoops\Run;
     $handler = new \Whoops\Handler\PrettyPageHandler();
-    $handler->setEditor('phpstorm');
+
+    $handler->setEditor(function ($file, $line) {
+        $file = str_replace("\\", "/", $file);
+
+        return [
+            "url" => "http://localhost:63342/api/file/{$file}:{$line}",
+            "ajax" => true,
+        ];
+    });
+
     $whoops->pushHandler($handler);
     $whoops->register();
 }
