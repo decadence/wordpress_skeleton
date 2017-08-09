@@ -51,7 +51,9 @@ function include_template($params, $name, $return = false)
 function enable_whoops()
 {
     $whoops = new \Whoops\Run;
-    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $handler = new \Whoops\Handler\PrettyPageHandler();
+    $handler->setEditor('phpstorm');
+    $whoops->pushHandler($handler);
     $whoops->register();
 }
 
