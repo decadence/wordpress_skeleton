@@ -37,7 +37,6 @@ define("WHOOPS", LOCALHOST);
 define("WP_DEBUG_DISPLAY", true);
 
 // запись ошибок в content/debug.log
-// whoops не записывает логи
 define("WP_DEBUG_LOG", LOCALHOST);
 
 // произвольный путь к логу

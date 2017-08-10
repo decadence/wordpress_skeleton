@@ -53,6 +53,7 @@ function enable_whoops()
     $whoops = new \Whoops\Run;
     $handler = new \Whoops\Handler\PrettyPageHandler();
 
+    // задаём ссылки для PhpStorm
     $handler->setEditor(function ($file, $line) {
         $file = str_replace("\\", "/", $file);
 
@@ -63,6 +64,12 @@ function enable_whoops()
     });
 
     $whoops->pushHandler($handler);
+
+    // подключаем логирование
+    $whoops->pushHandler(function (Throwable $error) {
+        error_log($error);
+    });
+
     $whoops->register();
 }
 
