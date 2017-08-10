@@ -56,7 +56,6 @@ define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/content');
 
 
 define('WP_DEFAULT_THEME', 'main');
-define('WPLANG', 'ru_RU');
 
 define('DB_NAME', 'wordpress');
 define('DB_USER', 'root');
