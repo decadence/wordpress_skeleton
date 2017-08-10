@@ -28,20 +28,20 @@ define("PRODUCTION", !LOCALHOST);
  */
 define("WP_DEBUG", LOCALHOST);
 
+/**
+ * Подключать ли Whoops
+ */
 define("WHOOPS", LOCALHOST);
 
-if (!WHOOPS) {
-    // не нужно при использовании Whoops, так как он не записывает логи
+// отображение ошибок
+define("WP_DEBUG_DISPLAY", true);
 
-    // отображение ошибок
-    define("WP_DEBUG_DISPLAY", LOCALHOST);
+// запись ошибок в content/debug.log
+// whoops не записывает логи
+define("WP_DEBUG_LOG", LOCALHOST);
 
-    // запись ошибок в content/debug.log
-    define("WP_DEBUG_LOG", LOCALHOST);
-
-    // произвольный путь к логу
-    // ini_set("error_log", BASE . "/error.log");
-}
+// произвольный путь к логу
+// ini_set("error_log", BASE . "/error.log");
 
 
 /**
