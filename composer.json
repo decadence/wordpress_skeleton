@@ -17,7 +17,8 @@
         "wpackagist-plugin/google-sitemap-generator": "^4.0.9",
         "wpackagist-plugin/w3-total-cache": "^0.9.5.4",
         "wpackagist-plugin/admin-menu-editor": "^1.8",
-        "wpackagist-plugin/filenames-to-latin": "^2.5"
+        "wpackagist-plugin/filenames-to-latin": "^2.5",
+        "psy/psysh": "^0.8.11"
     },
     "require-dev": {
         "symfony/var-dumper": "^3.3",
