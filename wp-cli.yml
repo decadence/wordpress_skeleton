@@ -1,0 +1,3 @@
+path: public/wp
+user: admin
+# skip-plugins: [advanced-cron-manager]
