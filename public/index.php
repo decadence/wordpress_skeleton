@@ -7,5 +7,5 @@ $wordpressHeader = __DIR__ . '/wp/wp-blog-header.php';
 if (file_exists($wordpressHeader)) {
     require($wordpressHeader);
 } else {
-    require(__DIR__ . "/maintenance.php");
+    require(__DIR__ . "/content/maintenance.php");
 }
