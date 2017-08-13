@@ -1,5 +1,5 @@
 {
-    "name": "decadence/wordpress",
+    "name": "decadence/wordpress_skeleton",
     "description": "WordPress blank theme with Composer support with some plugins and packages",
     "type": "project",
     "require": {
